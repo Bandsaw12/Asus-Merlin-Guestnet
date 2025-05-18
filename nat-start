@@ -1,0 +1,4 @@
+#!/bin/sh
+
+/jffs/addons/guestnet/guest-net.sh nat
+

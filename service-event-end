@@ -1,0 +1,4 @@
+#!/bin/sh
+
+if [ "$1" = "restart" ] && { [ "$2" = "wireless" ] || [ "$2" = "net_and_phy" ]; }; then { /jffs/addons/guestnet/guest-net.sh start & }; fi 
+if { [ "$1" = "start" ] || [ "$1" = "restart" ]; } && [ "$2" = "firewall" ]; then { /jffs/addons/guestnet/guest-net.sh firewall & }; fi 
