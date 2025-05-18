@@ -3,7 +3,7 @@
 # Script to create a seperate guest wifi network with the option of adding a ethernet port to the network
 # Inspired by the script YazFi by JackYaz (snbForums.com)
 #
-# Version 2.20.00bata	Dated May 4, 2025	- Cleanup and automate crude script I was using to add eth port to guest network
+# Version 2.20.00	Dated May 18, 2025	- Cleanup and automate crude script I was using to add eth port to guest network
 #
 # The following scripts must be created or altered;
 #
@@ -431,8 +431,6 @@ NAT_Rules() {
 	iptables -t nat -I POSTROUTING -s "$LANSUBNET" -d "$LANSUBNET" -o "$GUESTBR" -j MASQUERADE
 
 }
-
-
 
 Clean_EBT() {
 
